@@ -20,16 +20,19 @@ public class Main {
 		init(num);
 		int op=1;int x,y,re,f;
 		int over=gameover();
+		int turn = 0;
 		while(over==0)
 		{
 			if(op==1)
 			{
-				System.out.println("input");
+				if(turn%2==0)System.out.println("Player 1's turn for round" + turn");
+				else System.out.println("Player 2's turn for round" + turn)
+				System.out.println("Please enter row(1-9) space column(A-I)");
 				x=s.nextInt();
 				y=s.nextInt();
 				f=map[x][y];
 				re=judge(x,y,-1);
-				
+				turn++;
 			}
 			else
 			{
